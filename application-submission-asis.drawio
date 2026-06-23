@@ -1,0 +1,131 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Title -->
+    <mxCell id="title" value="AS-IS: Application Submission Process (eGov.kz)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="20" width="700" height="40" as="geometry" />
+    </mxCell>
+
+    <!-- Swimlane: Citizen -->
+    <mxCell id="lane1" value="Citizen" style="swimlane;startSize=30;horizontal=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="1060" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- Swimlane: Portal -->
+    <mxCell id="lane2" value="Portal (eGov.kz)" style="swimlane;startSize=30;horizontal=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="40" y="240" width="1060" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- Swimlane: Identity Provider -->
+    <mxCell id="lane3" value="Identity Provider" style="swimlane;startSize=30;horizontal=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="40" y="400" width="1060" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- Swimlane: Operator -->
+    <mxCell id="lane4" value="Government Operator" style="swimlane;startSize=30;horizontal=0;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="40" y="560" width="1060" height="160" as="geometry" />
+    </mxCell>
+
+    <!-- START EVENT -->
+    <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="lane1">
+      <mxGeometry x="40" y="60" width="50" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Task 1: Open portal -->
+    <mxCell id="t1" value="Open eGov.kz" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="lane1">
+      <mxGeometry x="130" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Task 2: Enter IIN + EDS each service -->
+    <mxCell id="t2" value="Enter IIN + EDS&#xa;(per service)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="lane1">
+      <mxGeometry x="310" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Task 3: Fill form manually -->
+    <mxCell id="t3" value="Fill form&#xa;manually" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="lane1">
+      <mxGeometry x="560" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Task 4: Attach documents -->
+    <mxCell id="t4" value="Attach documents&#xa;(scan / photo)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="lane1">
+      <mxGeometry x="730" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Task 5: Submit -->
+    <mxCell id="t5" value="Submit application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="lane1">
+      <mxGeometry x="900" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Portal: Validate EDS -->
+    <mxCell id="p1" value="Forward EDS&#xa;to Identity Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="lane2">
+      <mxGeometry x="310" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Portal: Receive app -->
+    <mxCell id="p2" value="Receive &amp; store&#xa;application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="lane2">
+      <mxGeometry x="900" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- PAIN POINT annotation -->
+    <mxCell id="pain1" value="⚠ Pain point:&#xa;No SSO — citizen&#xa;re-authenticates&#xa;per service" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="lane2">
+      <mxGeometry x="460" y="40" width="140" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Identity Provider: Validate -->
+    <mxCell id="id1" value="Validate IIN + EDS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="lane3">
+      <mxGeometry x="310" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Gateway: Valid? -->
+    <mxCell id="gw1" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="lane3">
+      <mxGeometry x="480" y="45" width="80" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Operator: Review -->
+    <mxCell id="op1" value="Review application&#xa;manually" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="lane4">
+      <mxGeometry x="730" y="55" width="120" height="60" as="geometry" />
+    </mxCell>
+
+    <!-- Operator: Gateway approve/reject -->
+    <mxCell id="gw2" value="Approve?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="lane4">
+      <mxGeometry x="880" y="45" width="80" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- PAIN POINT 2 -->
+    <mxCell id="pain2" value="⚠ Pain point:&#xa;No notification sent&#xa;to citizen after&#xa;submission" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="lane4">
+      <mxGeometry x="560" y="40" width="140" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- END EVENT: Approved -->
+    <mxCell id="end1" value="End&#xa;(Approved)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="lane4">
+      <mxGeometry x="1000" y="20" width="50" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- END EVENT: Rejected -->
+    <mxCell id="end2" value="End&#xa;(Rejected)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="lane4">
+      <mxGeometry x="1000" y="100" width="50" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- EDGES in lane1 -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="start" target="t1" parent="lane1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t1" target="t2" parent="lane1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t2" target="t3" parent="lane1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t3" target="t4" parent="lane1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t4" target="t5" parent="lane1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+    <!-- Cross-lane edges (using root parent) -->
+    <mxCell id="ce1" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t2" target="p1" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce2" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="p1" target="id1" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce3" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="id1" target="gw1" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce4" value="Yes" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="gw1" target="t3" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce5" value="No" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="gw1" target="t2" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce6" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="t5" target="p2" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce7" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="p2" target="op1" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce8" value="" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="op1" target="gw2" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce9" value="Yes" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="gw2" target="end1" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+    <mxCell id="ce10" value="No" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="gw2" target="end2" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+  </root>
+</mxGraphModel>
